@@ -1,25 +1,21 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
     double a, x, y;
 
-    printf("Введіть a: ");
+    printf("Введіть значення a: ");
     scanf("%lf", &a);
 
-    printf("Введіть x: ");
+    printf("Введіть значення x: ");
     scanf("%lf", &x);
 
-    printf("Введіть y: ");
+    printf("Введіть значення y: ");
     scanf("%lf", &y);
 
-   double lower_bound = fmin(x, y);
-   double upper_bound = fmax(x, y);//функції для визначення мінімального (lower_bound) і максимального (upper_bound) значень
-
-    if (a >= lower_bound && a <= upper_bound) {
-        printf("Значення %.2f належить інтервалу[%.2f, %.2f]\n", a, x, y);
+    if (a >= x && a <= y) {
+        printf("Значення a попадає в інтервал [%.2f, %.2f]\n", x, y);
     } else {
-        printf("Значення %.2f не належить інтервалу [%.2f, %.2f]\n", a, x, y);
+        printf("Значення a не попадає в інтервал [%.2f, %.2f]\n", x, y);
     }
 
     return 0;
